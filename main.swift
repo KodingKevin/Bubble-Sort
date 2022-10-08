@@ -15,7 +15,7 @@ func swap(integers: inout [String], firstIndex: Int, secondIndex: Int){
 }
 
 var StringSort = unsorted
-
+let count = unsorted.count - 2
 var totalswap = 0
 var pass = 0
 //print original state
@@ -39,12 +39,17 @@ while true{
     print("Pass: \(pass), Swaps: \(swaps)/\(totalswap), Array: \(StringSort)")
     
     //stops when it's no longer swapping
-    if pass == unsorted.count - 2{
+    if count <= 2{
         break
+    }
+    else{
+        if pass == count{    
+            break
+        }
     }
 }
 
 
 
 
-        
+
